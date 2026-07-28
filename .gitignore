@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Secrets
+.env
+
+# macOS
+.DS_Store
+
+# Downloaded datasets: ignore everything under data/<benchmark>/ except
+# the download scripts and READMEs (fetch with data/<benchmark>/download_*.py)
+data/lme/*
+!data/lme/download_lme.py
+!data/lme/README.md
+data/locomo/*
+!data/locomo/download_locomo.py
+!data/locomo/README.md
+
+# Ingestion manifests (internal artifacts; keep the folders)
+manifests/lme/*
+!manifests/lme/.gitkeep
+manifests/locomo/*
+!manifests/locomo/.gitkeep
+
+# generated user map (contains internal end_user ids)
+src/locomo/user_map*.json
+
+# run outputs (reproduction + internal full-pipeline);
+# the released memorybear_* artifacts stay tracked
+results/*/reproduce_*.json
+results/*/trials*.json
+results/*/eval-results-*.jsonl
+results/*/summary.json
+results/*/summary_stats.json
+results/*/_scored_subset.json
+results/*/*cache.jsonl

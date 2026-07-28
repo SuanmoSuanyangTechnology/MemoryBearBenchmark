@@ -1,0 +1,32 @@
+Notices
+=======
+
+This repository builds on two public long-term-memory benchmarks. The
+benchmark-derived components are licensed FROM their upstream projects and
+remain governed by those projects' licenses:
+
+1. LongMemEval
+   https://github.com/xiaowu0162/LongMemEval
+   MIT License, Copyright (c) 2024 Di Wu
+
+   The LongMemEval evaluation protocol used in src/lme/ — the LLM-judge
+   prompt templates and verdict logic (evaluate_qa.py, reproduce.py) — is
+   adapted from that repository under its MIT License. The LongMemEval
+   dataset is not redistributed here; users download it from the official
+   Hugging Face release (see data/lme/).
+
+2. LoCoMo
+   https://github.com/snap-research/locomo
+   CC BY-NC 4.0 (Attribution-NonCommercial), Copyright (c) Snap Inc.
+
+   The files under src/locomo/task_eval/ (evaluation.py,
+   evaluation_stats.py) are vendored verbatim from that repository so that
+   our scoring is provably LoCoMo's own. They remain under CC BY-NC 4.0:
+   attribution required, non-commercial use only. The LoCoMo dataset is not
+   redistributed here; users download it from the official repository (see
+   data/locomo/).
+
+All other code and content in this repository (the evaluation harnesses,
+reproduction scripts, documentation, and the released MemoryBear evaluation
+artifacts under results/) is Copyright (c) 2026 RedBear AI. All rights
+reserved.
